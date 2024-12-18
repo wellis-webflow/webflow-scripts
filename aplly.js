@@ -10,3 +10,5 @@ function AddRecordId() {
     }
   }
 }
+
+AddRecordId();
