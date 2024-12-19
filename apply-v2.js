@@ -21,12 +21,12 @@ if (continueButton) {
 }
 
 
-function getRootURL(originalURL = window.location.href) {
+function getRootURL(originalURL) {
   let url = new URL(originalURL);
   return url.origin + url.pathname;
 }
 
-function readOriginalURL(originalURL = window.location.href) {
+function readOriginalURL(originalURL) {
   let url = new URL(originalURL);
   // get all search params as dict
   const searchParams = Object.fromEntries(url.searchParams.entries());
