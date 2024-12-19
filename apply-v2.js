@@ -5,13 +5,17 @@ if (continueButton) {
   const checkoutURL = getRootURL(buttonUrl);
 
   let searchParams = readOriginalURL(originalURL);
+  console.log('searchParams', searchParams);
   let checkoutParams = readOriginalURL(buttonUrl);
-  let identifier;
+  console.log('checkoutParams', checkoutParams);
   if (searchParams['identifier']) {
-    identifier = searchParams['identifier'];
+    let identifier = searchParams['identifier'];
     checkoutParams["extra_fields[record_id]"] = identifier;
+    console.log('new checkoutParams', checkoutParams);
     const readyURL = createNewURL(checkoutURL, checkoutParams);
+    console.log('readyURL', readyURL);
     continueButton.href = readyURL;
+    console.log('continueButton.href', continueButton.href);
   }
 }
 
