@@ -1,4 +1,5 @@
 let continueButton = document.getElementById('continueButton');
+console.log('btn', continueButton);
 if (continueButton) {
   const originalURL = window.location.href;
   let buttonUrl = new URL(continueButton.href);
