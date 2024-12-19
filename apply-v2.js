@@ -1,7 +1,7 @@
 let continueButton = document.getElementById('continueButton');
 if (continueButton) {
   const originalURL = window.location.href;
-  buttonUrl = new URL(continueButton.href);
+  let buttonUrl = new URL(continueButton.href);
   const checkoutURL = getRootURL(buttonUrl);
 
   let searchParams = readOriginalURL(originalURL);
