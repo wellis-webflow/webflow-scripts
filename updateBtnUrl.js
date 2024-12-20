@@ -8,6 +8,11 @@ function updateContinueBtnUrl() {
     return;
   }
 
+  if (continueButton.href === '#') {
+    console.warn('Button href is "#".');
+    return;
+  }
+
   try {
     const buttonUrl = new URL(continueButton.href);
     if (!buttonUrl.searchParams.has('extra_fields[record_id]')) {
